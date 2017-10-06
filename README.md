@@ -62,3 +62,22 @@ You can send the payload via the socket using the 'send' method. The socket
 can be set using the 'set_socket' method.
 
 To add the data from a sensor, the methods 'add_sensor_name' are provided.
+
+### Example
+
+```
+# create a LoRa socket
+s = socket.socket(socket.AF_LORA, socket.SOCK_RAW)
+s.setsockopt(socket.SOL_LORA, socket.SO_DR, 0)
+s.setblocking(True)
+
+# creating Cayenne LPP packet
+lpp = cayenneLPP.CayenneLPP(size = 100, sock = s)
+
+# adding 2 digital outputs, the first one uses the default channel
+lpp.add_digital_input(True)
+lpp.add_digital_input(False, channel = 112)
+
+# sending the packet via the socket
+lpp.send()
+```
