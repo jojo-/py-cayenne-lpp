@@ -63,6 +63,8 @@ can be set using the 'set_socket' method.
 
 To add the data from a sensor, the methods 'add_sensor_name' are provided.
 
+The documentation is provided in the directory `doc`.
+
 ### Example
 
 ```
@@ -84,3 +86,6 @@ lpp.add_digital_input(False, channel = 112)
 # sending the packet via the socket
 lpp.send()
 ```
+
+Scripts to test the module with a LoPy (https://www.pycom.io/) is provided
+in the `test_lopy` directory.
