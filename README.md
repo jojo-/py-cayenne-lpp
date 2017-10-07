@@ -87,5 +87,8 @@ lpp.add_digital_input(False, channel = 112)
 lpp.send()
 ```
 
-Scripts to test the module with a LoPy (https://www.pycom.io/) is provided
-in the `test_lopy` directory.
+Scripts to test the module with a LoPy (https://www.pycom.io/) and The 
+Things Network is provided in the `test_lopy` directory. Note that you 
+need to update the values of `app_eui` and `app_key` with the correct
+credentials.
+
