@@ -71,7 +71,7 @@ class CayenneLPP:
     - gyrometer;
     - gps.
 
-    A object of this class has 3 attributes:
+    An object of this class has 3 attributes:
     - payload: the data from one or more senors formatted with the Cayenne LPP
                format;
     - size: the maximum size of the payload (depends on the network
@@ -102,6 +102,8 @@ class CayenneLPP:
         Args:
             size: The maximum size (in bytes) for the payload. Default = 11. If
                   the size is lower than 3, then it is set to 3.
+            sock: A socket that can be used by the send method to transmit the
+                  payload (optional).
         """
 
         if size < 3:
