@@ -1,6 +1,6 @@
 # py-cayenne-lpp
 
-A Python modulefor Cayenne Low Power Packet format
+A Python module for the Cayenne Low Power Packet format
 
 It aims to facilate the conversion of values typically read from sensors to a
 sequence of bits (the payload) that can be send over a network using the
